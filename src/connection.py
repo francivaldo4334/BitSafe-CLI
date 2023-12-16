@@ -13,8 +13,8 @@ from subprocess import Popen, PIPE
 import qrcode
 import requests
 
-from CustomHandler import CustomHandler
-from myUtils import SharedPreferences, MyIp
+from .CustomHandler import CustomHandler
+from .myUtils import SharedPreferences, MyIp
 
 
 class Connection:

@@ -2,5 +2,5 @@
 name=br.com.bitsafe
 runtime=org.freedesktop.Platform
 sdk=org.freedesktop.Sdk
-command=bitsafe
+command=python3 -m src.main
 finish-args=--share=network

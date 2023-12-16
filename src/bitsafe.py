@@ -1,7 +1,7 @@
 import argparse
 import sys
-from connection import Connection
-from constants import CLI_VERSION
+from .connection import Connection
+from .constants import CLI_VERSION
 class BitSafeCLI:
     def __init__(self):
         #main args

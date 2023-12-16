@@ -1,13 +1,12 @@
 import json
 import os
 import signal
-import time
 from http.server import BaseHTTPRequestHandler
 from subprocess import Popen, PIPE
 
-from constants import PUBLIC_KEY_PATH
-from myUtils import MyIp
-from myUtils import SharedPreferences
+from .constants import PUBLIC_KEY_PATH
+from .myUtils import MyIp
+from .myUtils import SharedPreferences
 
 
 class CustomHandler(BaseHTTPRequestHandler):
