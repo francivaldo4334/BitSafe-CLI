@@ -1,0 +1,6 @@
+[Application]
+name=br.com.bitsafe
+runtime=org.freedesktop.Platform
+sdk=org.freedesktop.Sdk
+command=bitsafe
+finish-args=--share=network
