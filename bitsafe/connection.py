@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import base64
 import json
 import os
@@ -5,16 +7,14 @@ import signal
 import socket
 import sys
 import threading
-from argparse import ArgumentParser
 from http.server import HTTPServer
 from io import BytesIO
 from subprocess import Popen, PIPE
-
-import qrcode
 import requests
+import qrcode
 
-from .CustomHandler import CustomHandler
-from .myUtils import SharedPreferences, MyIp
+from bitsafe.CustomHandler import CustomHandler
+from bitsafe.myUtils import SharedPreferences, MyIp
 
 
 class Connection:
@@ -164,7 +164,7 @@ class Connection:
                     ip = self.__get_local_ip()
                     base = self.__generate_qrcode_bytes(ip)
                     print(base)
-                elif ip_type == 'qrcode':
+                elif ip_type == 'qrcode_module':
                     ip = self.__get_local_ip()
                     qr_ascii = self.__generate_ascii_qrcode(ip)
                     print(qr_ascii)
@@ -209,7 +209,7 @@ class Connection:
             "-ip", "--ip_address",
             help="show ip into computer.",
             required=False,
-            choices=['string', 'qrcode', 'qrcode_base64']
+            choices=['string', 'qrcode_module', 'qrcode_base64']
         )
         parser.add_argument(
             "-c", "--connection",

@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import argparse
 import sys
-from .connection import Connection
-from .constants import CLI_VERSION
+from bitsafe.connection import Connection
+from bitsafe.constants import CLI_VERSION
 class BitSafeCLI:
     def __init__(self):
         #main args

@@ -1,12 +1,15 @@
+# -*- coding: utf-8 -*-
+
+
 import json
 import os
 import signal
 from http.server import BaseHTTPRequestHandler
 from subprocess import Popen, PIPE
 
-from .constants import PUBLIC_KEY_PATH
-from .myUtils import MyIp
-from .myUtils import SharedPreferences
+from bitsafe.constants import PUBLIC_KEY_PATH
+from bitsafe.myUtils import MyIp
+from bitsafe.myUtils import SharedPreferences
 
 
 class CustomHandler(BaseHTTPRequestHandler):
